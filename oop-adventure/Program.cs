@@ -16,9 +16,11 @@ Console.WriteLine(Text.Language.Welcome(player.Name));
 
 var house = new House(player);
 house.CreateRooms(3, 3);
+house.DecorateRooms();
 
 // register all valid actions
 Actions.Instance.Register(new Go(house));
+Actions.Instance.Register(new BackPack(player));
 house.GoToStartingRoom();
 
 var runLoop = true;

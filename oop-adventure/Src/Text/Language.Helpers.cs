@@ -8,7 +8,7 @@ public partial class Language()
     public virtual string JoinedWordList(string[] words, string conjunction)
     {
         _sb.Clear();
-        for (var i =; i < words.Length; i++)
+        for (var i =0; i < words.Length; i++)
         {
             if (i > 0)
                 _sb.Append(words.Length > 2 ? Comma + Space : Space);
