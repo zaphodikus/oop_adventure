@@ -1,4 +1,6 @@
 ﻿
+using System.Text;
+
 namespace OOPAdventure;
 
 public class Room
@@ -16,4 +18,21 @@ public class Room
     };
 
     public bool Visited { get; set; }
+
+    public override string ToString()
+    {
+        var sb = new StringBuilder();
+        if (Visited)
+            sb.Append(String.Format(Text.Language.RoomOld, Name));
+        else
+            sb.Append(String.Format(Text.Language.RoomNew, Name));
+
+        var names = Enum.GetNames(typeof(Directions));
+        // -1 is our special value that says there is no door
+        var directions = (from p in names where Neighbours[(Directions)Enum.Parse(typeof(Directions), p)] > -1 select p.ToLower()).ToArray();
+
+        var description = String.Format(Text.Language.JoinedWordList(directions, Text.Language.And));
+        sb.Append(description);
+        return sb.ToString();
+    }
 }

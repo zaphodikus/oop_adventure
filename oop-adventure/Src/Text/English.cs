@@ -1,5 +1,5 @@
 ﻿
-namespace OOPAdventure.English;
+namespace OOPAdventure;
 
 public class English :Language
 {
@@ -14,6 +14,11 @@ public class English :Language
         GoError = "Cannot go that way.";
         WhatToDo = "What do you want to do?";
         Quit = "quit";
+        RoomNew = "You entered {0}.";
+        RoomOld = "You return to {}.";
+        And = "and"; // joining word 
+        Comma = ",";
+        Space = " ";
     }
 
     public override string Welcome(string name) 
