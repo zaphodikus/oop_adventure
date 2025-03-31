@@ -1,6 +1,7 @@
 ﻿namespace OOPAdventure;
 
-
+// All inventories will implement this interface, the inventory is
+// managed using the translated item names of items.
 public interface IInventory
 {
     int Total { get; }

@@ -5,6 +5,7 @@ public sealed class Actions
 {
     private static Actions _instance;
 
+    // singleton pattern : single instance accessor
     public static Actions Instance
     {
         get {

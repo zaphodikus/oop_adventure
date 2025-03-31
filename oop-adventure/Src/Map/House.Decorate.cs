@@ -13,7 +13,8 @@ public partial class House
                 // remove that description so that the description of each room is unique
                 Text.Language.RoomDescriptions.Remove(roomDescription);
             }
-            // TODO: this formatter is confusing
+            // NOTE: this formatter is confusing only because we are reformatting:
+            // " You are in a {0} room with doors to the {1}." in a way that allows us to append another string later
             room.Description = String.Format(Text.Language.DefaultRoomDescription, roomDescription, "{0}");
         }
     }
