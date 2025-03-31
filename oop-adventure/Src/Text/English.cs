@@ -15,7 +15,7 @@ public class English :Language
         WhatToDo = "What do you want to do?";
         Quit = "quit";
         RoomNew = "You entered {0}.";
-        RoomOld = "You return to {}.";
+        RoomOld = "You return to {0}";
         And = "and"; // joining word 
         Comma = ",";
         Space = " ";
@@ -32,6 +32,27 @@ public class English :Language
         BackPack = "backpack";
         BackPackError = "You don't have anything in your backpack.";
         BackpackDescription = "Your backpack contains : {0}.";
+        Chest = "chest";
+        UnlockChest = "you unlocked the chest.";
+        Key = "key";
+        ChestEmpty = "The chest is empty.";
+        ChestFound = "You found: {0}";
+        Gold = "{0} gold {1}";
+        Coin = "coin";
+        Coins = Coin + "s";
+        Plural = "s";
+        Is = "is";
+        Are = "are";
+        TotalItems = " There {0} {1} item{2} in the room: ";
+        Period = ".";
+        Take = "Take";
+        TakeError = "There is nothing to take.";
+        NotTaken = "You can't take that";
+        TookDescription = "You took a {0}";
+        CantTakeDescription = "You cant take the {0}";
+        Use = "Use";
+        UseError = "You can't use that.";
+        UseSuccess = "You used the {0}.";
     }
 
     public override string Welcome(string name) 

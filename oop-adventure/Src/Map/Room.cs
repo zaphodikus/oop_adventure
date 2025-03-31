@@ -34,6 +34,15 @@ public class Room : IInventory
 
         var description = String.Format(Text.Language.JoinedWordList(directions, Text.Language.And));
         sb.Append(description);
+
+        if (_inventory.Total > 0)
+        {
+            var items = _inventory.InventoryList; // get names of all items here
+            var pluralPre = items.Length >1 ? Text.Language.Are : Text.Language.Is;
+            var pluralPost = items.Length > 1 ? Text.Language.Plural : "";
+            sb.Append(string.Format(Text.Language.TotalItems, pluralPre, items.Length, pluralPost));
+            sb.Append(Text.Language.JoinedWordList(items, Text.Language.And) + Text.Language.Period);
+        }
         return sb.ToString();
     }
 

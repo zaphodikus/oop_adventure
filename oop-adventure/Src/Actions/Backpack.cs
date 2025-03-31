@@ -2,6 +2,7 @@
 
 public class BackPack : Action
 {
+    public override string Name => Text.Language.BackPack;
     private readonly IInventory _inventory;
 
     public BackPack(IInventory inventory)
